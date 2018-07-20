@@ -1,4 +1,4 @@
-import * as bunyan from 'bunyan'
+import bunyan from 'bunyan'
 
 const logger = bunyan.createLogger({
   name: 'overseer-runner', // Todo make this configurable upon initialization

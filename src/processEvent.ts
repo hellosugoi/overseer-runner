@@ -11,6 +11,7 @@ export default async function ProcessEvent({ workFn, data, eventName }: IProcess
   const context = {
     logger: logger.child({ tx: transactionHash, eventName, blockNumber })
   }
+
   context.logger.info(`Started working on event ${eventName}`)
   try {
     await workFn.call(context, data)
