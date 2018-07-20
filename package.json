@@ -1,14 +1,15 @@
 {
   "name": "overseer-runner",
-  "version": "0.2.0",
-  "description": "connects ethereum events to functions",
+  "version": "0.0.1",
+  "description": "A web3 events process manager",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc -p .",
     "watch": "tsc -w",
-    "postinstall": "rm -f node_modules/web3/index.d.ts"
+    "postinstall": "rm -f node_modules/web3/index.d.ts",
+    "prepublishOnly": "tsc -p ."
   },
   "keywords": [
     "ethereum",
@@ -18,6 +19,14 @@
   ],
   "author": "angello pozo",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hellosugoi/overseer-runner"
+  },
+  "bugs": {
+    "url": "https://github.com/hellosugoi/overseer-runner/issues"
+  },
+  "homepage": "https://github.com/hellosugoi/overseer-runner#readme",
   "dependencies": {
     "bunyan": "^1.8.12",
     "web3": "^1.0.0-beta.34"
